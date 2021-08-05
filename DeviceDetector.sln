@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2EBEFFFB-A368-4635-AE8B-F8B2F6429B6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceDetector", "DeviceDetector\DeviceDetector.csproj", "{7D5160E5-1A2E-4460-9F36-0438448B8419}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeviceDetector", "DeviceDetector\DeviceDetector.csproj", "{7D5160E5-1A2E-4460-9F36-0438448B8419}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A7525089-711D-4E6D-B85E-0E1A2B9DAF42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceDetectionTest", "DeviceDetectionTest\DeviceDetectionTest.csproj", "{F1870076-E2B3-437D-9455-D3967E5AA9BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +21,17 @@ Global
 		{7D5160E5-1A2E-4460-9F36-0438448B8419}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D5160E5-1A2E-4460-9F36-0438448B8419}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D5160E5-1A2E-4460-9F36-0438448B8419}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1870076-E2B3-437D-9455-D3967E5AA9BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1870076-E2B3-437D-9455-D3967E5AA9BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1870076-E2B3-437D-9455-D3967E5AA9BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1870076-E2B3-437D-9455-D3967E5AA9BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{7D5160E5-1A2E-4460-9F36-0438448B8419} = {2EBEFFFB-A368-4635-AE8B-F8B2F6429B6C}
+		{F1870076-E2B3-437D-9455-D3967E5AA9BF} = {A7525089-711D-4E6D-B85E-0E1A2B9DAF42}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {54B8CB20-1BB9-4CBA-9249-C934BEBD35C3}

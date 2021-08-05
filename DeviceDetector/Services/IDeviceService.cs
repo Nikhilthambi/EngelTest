@@ -9,5 +9,6 @@ namespace DeviceDetector.Services
     public interface IDeviceService
     {
         Task<bool> SaveDevice(DeviceModel device);
+        Task<List<DeviceModel>> devices();
     }
 }

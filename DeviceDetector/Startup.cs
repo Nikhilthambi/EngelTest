@@ -40,6 +40,7 @@ namespace DeviceDetector
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "DeviceDetector", Version = "v1" });
             });
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +52,11 @@ namespace DeviceDetector
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "DeviceDetector v1"));
             }
+
+            app.UseCors(options =>
+            options.WithOrigins("http://localhost:4200").
+            AllowAnyMethod().
+            AllowAnyHeader());
 
             app.UseHttpsRedirection();
 

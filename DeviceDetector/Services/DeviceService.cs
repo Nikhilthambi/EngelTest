@@ -12,6 +12,31 @@ namespace DeviceDetector.Services
     {
         private readonly IDeviceRepository deviceRepository;
         public DeviceService(IDeviceRepository _deviceRepository) => deviceRepository = _deviceRepository;
+
+        public async Task<List<DeviceModel>> devices()
+        {
+            try
+            {
+                var data = await deviceRepository.devices();
+                return  data.Select(c =>
+                    new DeviceModel
+                    {
+                        Browser = c.Browser,
+                        Browser_Version = c.BrowserVersion,
+                        Device = c.DeviceName,
+                        DeviceType = c.DeviceType,
+                        Orientation = c.Orientation,
+                        Os = c.OperatingSystem,
+                        Os_Version = c.OsVersion,
+                        UserAgent = c.UserAgent
+                    }).ToList();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public async Task<bool> SaveDevice(DeviceModel device)
         {
             try
@@ -32,7 +57,6 @@ namespace DeviceDetector.Services
             }
             catch (Exception)
             {
-
                 throw;
             }
         }

@@ -9,5 +9,7 @@ namespace DeviceDetector.Repository
     public interface IDeviceRepository
     {
         Task<bool> SaveDevice(Device device);
+
+        Task<List<Device>> devices();
     }
 }
